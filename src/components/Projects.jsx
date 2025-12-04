@@ -44,8 +44,8 @@ const Projects = () => {
       icon: Bike,
       title: 'DjangoWebBikeRental',
       description:
-        'Smart bike rental web system using Django, Docker & Selenium',
-      technologies: ['Django', 'Docker', 'Selenium', 'Python'],
+        'Hệ thống quản lý cho thuê xe đạp trực tuyến với đầy đủ tính năng: đặt xe, thanh toán VNPay/MoMo, RESTful API, dashboard admin và calendar booking',
+      technologies: ['Django 5.1', 'Django REST Framework', 'PostgreSQL', 'Redis', 'VNPay', 'Docker', 'JWT', 'Chart.js'],
       color: 'from-orange-500 to-yellow-500',
       status: 'completed',
     },
