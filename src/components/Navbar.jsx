@@ -61,13 +61,23 @@ const Navbar = () => {
             }}
             className="flex-shrink-0 group"
           >
-            <div className="flex items-center gap-2">
-              <div className="p-2 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 group-hover:scale-110 transition-transform duration-300">
-                <Code className="text-white w-5 h-5" />
+            <div className="flex items-center gap-3">
+              {/* Logo with gradient border */}
+              <div className="relative">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-xl opacity-75 group-hover:opacity-100 blur-sm transition-opacity duration-300"></div>
+                <div className="relative p-2.5 rounded-xl bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Code className="text-white w-6 h-6" />
+                </div>
               </div>
-              <span className="text-2xl font-extrabold gradient-text group-hover:scale-105 transition-transform duration-300">
-                NH Le
-              </span>
+              {/* Logo text with better styling */}
+              <div className="flex flex-col">
+                <span className="text-2xl font-black bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 leading-tight">
+                  Hoàng Lê
+                </span>
+                <span className="text-xs text-slate-500 dark:text-slate-400 font-medium -mt-1">
+                  Developer
+                </span>
+              </div>
             </div>
           </a>
 

@@ -3,12 +3,9 @@ import {
   Video,
   Apple,
   Heart,
-  Home,
   Bike,
   Gamepad2,
   Zap,
-  ExternalLink,
-  Github,
   Users,
   Calendar,
   TrendingUp,
@@ -20,8 +17,8 @@ const Projects = () => {
       icon: Video,
       title: 'Simple-WebRTC',
       description:
-        'Real-time chat & video call platform using React + Spring Boot + WebSocket',
-      technologies: ['React', 'Spring Boot', 'WebSocket', 'WebRTC'],
+        'Chat & FaceTime & Code Thông Minh - Real-time chat, video call và code editor với AI Assistant cho lập trình viên',
+      technologies: ['React', 'Spring Boot', 'WebSocket', 'WebRTC', 'AI Assistant', 'Tailwind CSS'],
       color: 'from-blue-500 to-cyan-500',
       status: 'completed',
     },
@@ -29,8 +26,8 @@ const Projects = () => {
       icon: Apple,
       title: 'NutriCook',
       description:
-        'Nutrition app for calculating calories and suggesting healthy meals',
-      technologies: ['React', 'Spring Boot', 'Nutrition API'],
+        'Hệ thống quản lý dinh dưỡng toàn diện với AI tính calories tự động, công thức nấu ăn và theo dõi tập thể dục',
+      technologies: ['Kotlin', 'Spring Boot', 'Firebase', 'Google Gemini AI', 'Cloudinary'],
       color: 'from-green-500 to-emerald-500',
       status: 'completed',
     },
@@ -38,17 +35,9 @@ const Projects = () => {
       icon: Heart,
       title: 'Healthmate-Care-System',
       description:
-        'Health management system with booking, chatbot, and statistics',
-      technologies: ['React', 'Spring Boot', 'AI Chatbot', 'Analytics'],
+        'Hệ thống quản lý & chăm sóc sức khỏe sinh sản với đặt khám online, hỏi đáp bác sĩ và chatbot tư vấn 24/7',
+      technologies: ['Spring Boot', 'MySQL', 'Docker', 'Chatbot', 'WebSocket'],
       color: 'from-red-500 to-pink-500',
-      status: 'completed',
-    },
-    {
-      icon: Home,
-      title: 'HomeMobile',
-      description: 'Kotlin-based mobile app for smart home control',
-      technologies: ['Kotlin', 'Android', 'IoT'],
-      color: 'from-purple-500 to-indigo-500',
       status: 'completed',
     },
     {
@@ -64,8 +53,8 @@ const Projects = () => {
       icon: Gamepad2,
       title: 'PickleCoach-AI',
       description:
-        'AI-powered Pickleball coaching assistant with speech-to-text and chatbot integration',
-      technologies: ['AI', 'Speech-to-Text', 'Chatbot', 'React'],
+        'Nền tảng học Pickleball với AI phân tích kỹ thuật, video call với huấn luyện viên và theo dõi tiến độ học tập',
+      technologies: ['React', 'Spring Boot', 'WebRTC', 'OpenCV', 'TensorFlow', 'Python'],
       color: 'from-teal-500 to-cyan-500',
       status: 'completed',
     },
@@ -74,39 +63,30 @@ const Projects = () => {
   const evChargingProject = {
     icon: Zap,
     title: 'EV-Charging-Station-Management-System',
-    description:
-      'Hệ Thống Quản Lý Trạm Sạc Xe Điện - A comprehensive microservices-based system for managing electric vehicle charging stations',
-    fullDescription: `Xây dựng Hệ Thống Quản Lý Trạm Sạc Xe Điện sử dụng kiến trúc microservices. Hệ thống phục vụ 3 nhóm người dùng chính: Tài Xế Xe Điện (tìm trạm sạc, đặt chỗ, bắt đầu/kết thúc phiên sạc, thanh toán), Nhân Viên Trạm Sạc (giám sát điểm sạc, xử lý thanh toán tại chỗ), và Quản Trị Viên (quản lý trạm sạc/điểm sạc, người dùng, gói dịch vụ, báo cáo & thống kê doanh thu).`,
-    technologies: [
-      'Java',
-      'Spring Boot',
-      'React',
-      'MySQL',
-      'Microservices',
-      'Docker',
-      'Docker Compose',
-      'VNPay/MoMo',
-      'Google Maps API',
-      'JWT',
-      'WebSocket',
-    ],
-    features: [
+    description: 'Hệ Thống Quản Lý Trạm Sạc Xe Điện - Kiến trúc microservices với hỗ trợ đa mô hình kinh doanh B2B và B2C',
+    highlights: [
       {
         icon: Users,
-        text: '3 nhóm người dùng: Tài xế, Nhân viên, Quản trị viên',
+        text: 'Đa mô hình: B2C (Tài xế, Khách hàng) & B2B (Chủ trạm, Nhà đầu tư)',
       },
       {
         icon: Calendar,
-        text: 'Lộ trình 8 tuần với phân công vai trò rõ ràng',
+        text: 'Lộ trình phát triển: MVP (8 tuần) → B2B (12-16 tuần) → AI (16-20 tuần)',
       },
       {
         icon: TrendingUp,
-        text: 'Tích hợp thanh toán VNPay/MoMo và báo cáo doanh thu',
+        text: 'Tích hợp: VNPay/MoMo, Google Maps API, AI dự báo nhu cầu',
       },
-      {
-        icon: Zap,
-        text: 'Kiến trúc microservices với Docker Compose',
-      },
+    ],
+    technologies: [
+      'Java 17+',
+      'Spring Boot 3.0+',
+      'React 18',
+      'Microservices',
+      'Docker',
+      'MySQL',
+      'Redis',
+      'Kubernetes (tương lai)',
     ],
     color: 'from-yellow-500 via-orange-500 to-red-500',
     status: 'in-progress',
@@ -221,28 +201,17 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="mb-8">
-                <h4 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-4 flex items-center gap-2">
-                  <span className="text-3xl">📋</span> Mục Tiêu Dự Án
-                </h4>
-                <div className="glass-card rounded-2xl p-6">
-                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-lg">
-                    {evChargingProject.fullDescription}
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                {evChargingProject.features.map((feature, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                {evChargingProject.highlights.map((highlight, index) => (
                   <div
                     key={index}
                     className="group flex items-start space-x-4 p-5 rounded-2xl glass-card hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-lg group-hover:scale-110 transition-transform">
-                      <feature.icon size={24} />
+                      <highlight.icon size={24} />
                     </div>
                     <span className="text-slate-700 dark:text-slate-300 font-medium flex-1 pt-1">
-                      {feature.text}
+                      {highlight.text}
                     </span>
                   </div>
                 ))}
@@ -263,29 +232,10 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-
-              <div className="border-t-2 border-slate-200 dark:border-slate-700 pt-8">
-                <h4 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-6 flex items-center gap-2">
-                  <span className="text-3xl">⚙️</span> Technical Highlights
-                </h4>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="p-5 rounded-2xl glass-card hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <div className="text-blue-600 dark:text-blue-400 font-bold text-sm mb-2">Architecture</div>
-                    <div className="text-slate-700 dark:text-slate-300 font-semibold">Microservices</div>
-                  </div>
-                  <div className="p-5 rounded-2xl glass-card hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <div className="text-purple-600 dark:text-purple-400 font-bold text-sm mb-2">Deployment</div>
-                    <div className="text-slate-700 dark:text-slate-300 font-semibold">Docker Compose</div>
-                  </div>
-                  <div className="p-5 rounded-2xl glass-card hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <div className="text-indigo-600 dark:text-indigo-400 font-bold text-sm mb-2">Timeline</div>
-                    <div className="text-slate-700 dark:text-slate-300 font-semibold">8 weeks (MVP)</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )
