@@ -6,9 +6,30 @@ import Technologies from './components/Technologies'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import VisitorCounter from './components/VisitorCounter'
 
 function App() {
   useEffect(() => {
+    // Check if admin mode is enabled via URL parameter and save admin IP
+    const urlParams = new URLSearchParams(window.location.search)
+    if (urlParams.get('admin') === 'true') {
+      // Lấy và lưu IP của admin (máy của bạn)
+      fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+          localStorage.setItem('adminIP', data.ip)
+          localStorage.setItem('isAdmin', 'true')
+          console.log('Admin IP saved:', data.ip)
+        })
+        .catch(error => {
+          console.error('Error getting admin IP:', error)
+          localStorage.setItem('isAdmin', 'true')
+        })
+      
+      // Remove query parameter from URL
+      window.history.replaceState({}, document.title, window.location.pathname)
+    }
+
     // Add scroll animations
     const observerOptions = {
       threshold: 0.1,
@@ -62,6 +83,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <VisitorCounter />
     </div>
   )
 }
